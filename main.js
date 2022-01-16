@@ -8,7 +8,7 @@
 // or it could be right.
 // Find the rabbit using an algorithm that has an efficent Big O notation
 
-// Here is my First take after being aware of the hints:
+// Here is my first take after being aware of the hints:
 
 let arr = [];
 let rabbitHole = Math.floor(Math.random() * 100);
