@@ -20,11 +20,24 @@ for (let i = 0; i < 100; i++) {
   else arr[i] = ".";
 }
 
-while (true) {
-  if (checkHole(1)) return;
-}
+let guessNum = 0;
+
+(function guess() {
+  //if rabbit starts on a even hole we can squeeze the to the end
+  for (let i = 0; i < arr.length; i++) {
+    if (checkHole(i)) return;
+  }
+
+  //if rabbit starts on a odd hole we can squeeze the to the end
+  for (let i = 1; i < arr.length; i++) {
+    if (checkHole(i)) return;
+  }
+})();
+
+console.log("it took " + guessNum + " guesses");
 
 function checkHole(index) {
+  guessNum++;
   if (arr[index] === "G") {
     console.log("You won");
     return true;
@@ -58,5 +71,4 @@ function changeRabbit(direction) {
       rabbitHole--;
     }
   }
-  console.log(arr);
 }
