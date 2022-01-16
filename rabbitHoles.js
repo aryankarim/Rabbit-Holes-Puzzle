@@ -23,12 +23,12 @@ for (let i = 0; i < 100; i++) {
 let guessNum = 0;
 
 (function guess() {
-  //if rabbit starts on a even hole we can squeeze the to the end
+  //if rabbit starts on an even hole we can squeeze the rabbit to the end
   for (let i = 0; i < arr.length; i++) {
     if (checkHole(i)) return;
   }
 
-  //if rabbit starts on a odd hole we can squeeze the to the end
+  //if rabbit starts on an odd hole we can squeeze the rabbit to the end
   for (let i = 1; i < arr.length; i++) {
     if (checkHole(i)) return;
   }
